@@ -31,8 +31,8 @@
                 "text": "Abogado"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -129,9 +129,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "257795a7-229d-4c7c-81f1-1b58a43c3e7e",
+                  "title": "Suplantación de usuario interno",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": " Un atacante podría hacerse pasar por un abogado robando credenciales débiles o reutilizadas → Acceso no autorizado a contratos confidenciales.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -148,8 +166,8 @@
                 "text": "Cliente"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -246,23 +264,9 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": [
-                {
-                  "id": "870572f0-c0af-47c4-bb61-f3b75153a8f4",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Spoofing",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 2,
-                  "score": ""
-                }
-              ]
+              "threats": []
             }
           },
           {
@@ -403,11 +407,13 @@
                 "text": "BD"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -504,13 +510,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "e5fc2e82-ac15-4546-8b61-fad02475d1bd",
+                  "title": "Manipulación de metadatos en la base de datos",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Un atacante podría alterar registros (propietario, permisos, enlaces compartidos). → Acceso indebido o corrupción de información legal.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -527,8 +553,8 @@
                 "text": "API"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -625,12 +651,86 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "9bd0015c-d01d-4817-b279-22c2b965d52a",
+                  "title": "Falta de registro de accesos a enlaces públicos",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "No se puede demostrar qué cliente accedió o descargó un documento. → Problemas legales y de auditoría.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                },
+                {
+                  "id": "4786e18c-0a0a-4905-a7fc-a1ab0b09b8f7",
+                  "title": "Ausencia de logs de subida y eliminación de archivos",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Un usuario podría negar haber subido o borrado un contrato. → Imposibilidad de atribuir responsabilidades.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                },
+                {
+                  "id": "ea6c4e34-34db-472b-984d-644debcab71e",
+                  "title": "Saturación de la API mediante peticiones masivas",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Un atacante podría enviar múltiples peticiones de subida o descarga. → Indisponibilidad del servicio para usuarios legítimos",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": ""
+                },
+                {
+                  "id": "d76c02c7-faf1-4721-8eb8-b1e484ae6dc3",
+                  "title": "Acceso directo al almacenamiento saltándose la API",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": " Un atacante obtiene acceso a S3/disco sin pasar por controles de autorización. → Acceso total a los documentos.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                },
+                {
+                  "id": "a6766201-6652-49c9-b234-4569dd30d666",
+                  "title": "Permisos excesivos de la API sobre la base de datos o el almacenamiento",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": " Si la API es comprometida, el atacante obtiene más privilegios de los necesarios. → Impacto crítico sobre todo el sistema.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 2
+              }
             }
           },
           {
@@ -768,110 +868,6 @@
               {
                 "x": -1090,
                 "y": 850
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "4732ea93-8c9e-4b3f-8607-da2204ca5509",
-            "source": {
-              "cell": "225a1a7e-1907-4ff6-af8c-b1df4109a486",
-              "port": "95bca528-7700-49e8-b69f-33cd03b5c19c"
-            },
-            "target": {
-              "cell": "f55722b8-f1e7-41d3-a1c5-64bdfead7b44",
-              "port": "522a779f-eb85-4283-a254-124a2ed26846"
-            },
-            "vertices": [
-              {
-                "x": -950,
-                "y": 670
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "b2febd43-c584-4dab-ade2-e217830947ff",
-            "source": {
-              "cell": "b405db83-50ca-49f3-9312-ac9d7e8ffe5b",
-              "port": "95bca528-7700-49e8-b69f-33cd03b5c19c"
-            },
-            "target": {
-              "cell": "f55722b8-f1e7-41d3-a1c5-64bdfead7b44",
-              "port": "a4995a33-acd1-47e4-9032-7b162faef802"
-            },
-            "vertices": [
-              {
-                "x": -960,
-                "y": 1066
               }
             ]
           },
@@ -1079,7 +1075,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1093,7 +1089,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              ""
             ],
             "id": "0a7c0623-192c-48eb-8c85-a63aeb0ec312",
             "source": {
@@ -1131,7 +1127,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1145,7 +1141,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              ""
             ],
             "id": "cceecf67-e922-4f32-837d-b79955430015",
             "source": {
@@ -1183,7 +1179,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1197,59 +1193,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
-            ],
-            "id": "5ed4fb9e-520f-4d2a-bdc4-cbe6a460967d",
-            "source": {
-              "cell": "b1c8f658-a9b3-4661-945e-479c2fb728f3",
-              "port": "0397d7df-9824-48f5-8922-9afa49a99481"
-            },
-            "target": {
-              "cell": "f55722b8-f1e7-41d3-a1c5-64bdfead7b44",
-              "port": "522a779f-eb85-4283-a254-124a2ed26846"
-            },
-            "vertices": [
-              {
-                "x": -830,
-                "y": 590
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
+              ""
             ],
             "id": "6d92b32f-833b-49b4-9140-062e9af14a02",
             "source": {
@@ -1287,7 +1231,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1301,99 +1245,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
-            ],
-            "id": "d43662ae-b7d9-4803-a5e3-6d4bc1f0a1ed",
-            "source": {
-              "cell": "f55722b8-f1e7-41d3-a1c5-64bdfead7b44",
-              "port": "05f157a4-3b5f-4b3a-9bf1-4caf152f9cda"
-            },
-            "target": {
-              "cell": "1d2ecbd7-29bd-4857-b047-854c3d10c7e3",
-              "port": "8f8d9644-d8ba-4a42-ae20-4b65fc9cc0ac"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "0b31f5ec-275f-48e0-96b9-9c048c6fecd4",
-            "source": {
-              "cell": "255d0950-beb2-45b3-ad1f-13563a05dc87",
-              "port": "8f8d9644-d8ba-4a42-ae20-4b65fc9cc0ac"
-            },
-            "target": {
-              "cell": "1d2ecbd7-29bd-4857-b047-854c3d10c7e3",
-              "port": "05f157a4-3b5f-4b3a-9bf1-4caf152f9cda"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
+              ""
             ],
             "id": "873fef02-1d06-42d8-b013-a9830c4975e1",
             "source": {
@@ -1406,8 +1258,8 @@
             },
             "vertices": [
               {
-                "x": -420,
-                "y": 710
+                "x": -440,
+                "y": 730
               }
             ]
           },
@@ -1431,7 +1283,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1445,7 +1297,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              ""
             ],
             "id": "5d2ad2a4-3ca5-459e-b767-57990bafed4b",
             "source": {
@@ -1464,6 +1316,320 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "5ed4fb9e-520f-4d2a-bdc4-cbe6a460967d",
+            "source": {
+              "cell": "b1c8f658-a9b3-4661-945e-479c2fb728f3",
+              "port": "0397d7df-9824-48f5-8922-9afa49a99481"
+            },
+            "target": {
+              "cell": "f55722b8-f1e7-41d3-a1c5-64bdfead7b44",
+              "port": "522a779f-eb85-4283-a254-124a2ed26846"
+            },
+            "vertices": [
+              {
+                "x": -830,
+                "y": 590
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "0b31f5ec-275f-48e0-96b9-9c048c6fecd4",
+            "source": {
+              "cell": "255d0950-beb2-45b3-ad1f-13563a05dc87",
+              "port": "8f8d9644-d8ba-4a42-ae20-4b65fc9cc0ac"
+            },
+            "target": {
+              "cell": "1d2ecbd7-29bd-4857-b047-854c3d10c7e3",
+              "port": "05f157a4-3b5f-4b3a-9bf1-4caf152f9cda"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d32e21e5-e5f1-422d-9bd3-16d0b1039823",
+                  "title": "Exposición de documentos mediante enlaces públicos compartidos",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Los enlaces pueden ser reenviados o interceptados. → Fuga de información confidencial",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              ""
+            ],
+            "id": "4732ea93-8c9e-4b3f-8607-da2204ca5509",
+            "source": {
+              "cell": "225a1a7e-1907-4ff6-af8c-b1df4109a486",
+              "port": "95bca528-7700-49e8-b69f-33cd03b5c19c"
+            },
+            "target": {
+              "cell": "f55722b8-f1e7-41d3-a1c5-64bdfead7b44",
+              "port": "522a779f-eb85-4283-a254-124a2ed26846"
+            },
+            "vertices": [
+              {
+                "x": -950,
+                "y": 670
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "0596fe8a-3ce6-49d8-86ca-cdb0a910e1b1",
+                  "title": "Exposición de documentos mediante enlaces públicos compartidos",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": " Los enlaces pueden ser reenviados o interceptados. → Fuga de información confidencial.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              ""
+            ],
+            "id": "b2febd43-c584-4dab-ade2-e217830947ff",
+            "source": {
+              "cell": "b405db83-50ca-49f3-9312-ac9d7e8ffe5b",
+              "port": "95bca528-7700-49e8-b69f-33cd03b5c19c"
+            },
+            "target": {
+              "cell": "f55722b8-f1e7-41d3-a1c5-64bdfead7b44",
+              "port": "a4995a33-acd1-47e4-9032-7b162faef802"
+            },
+            "vertices": [
+              {
+                "x": -960,
+                "y": 1066
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "e023111b-ee4c-4d80-a23d-d8506f6c1c71",
+                  "title": "Transmisión de archivos sin cifrado entre servicios",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": " Los documentos enviados al antivirus podrían viajar en texto claro. → Interceptación de contratos confidenciales.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              ""
+            ],
+            "id": "d43662ae-b7d9-4803-a5e3-6d4bc1f0a1ed",
+            "source": {
+              "cell": "f55722b8-f1e7-41d3-a1c5-64bdfead7b44",
+              "port": "05f157a4-3b5f-4b3a-9bf1-4caf152f9cda"
+            },
+            "target": {
+              "cell": "1d2ecbd7-29bd-4857-b047-854c3d10c7e3",
+              "port": "8f8d9644-d8ba-4a42-ae20-4b65fc9cc0ac"
+            },
+            "vertices": [
+              {
+                "x": -710,
+                "y": 880
+              }
+            ]
+          },
+          {
             "position": {
               "x": -580,
               "y": 840
@@ -1477,8 +1643,8 @@
                 "text": "Antivirus"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1575,12 +1741,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "b2798297-e5d9-4f37-b9f7-e1184e3ca829",
+                  "title": "Suplantación del servicio",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Un atacante podría hacerse pasar por el servicio antivirus y devolver respuestas falsas indicando que un archivo es limpio→ Almacenamiento de malware en el sistema.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "3718ac53-bd03-4659-ae9b-418f78b1619f",
+                  "title": "Manipulación de archivos tras el análisis del antivirus",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "El archivo podría modificarse después de ser analizado y antes de ser almacenado definitivamente",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "35481192-0686-483c-bf18-4d158c829f3f",
+                  "title": "Ataques de denegación de servicio al antivirus",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": " Envío masivo de archivos grandes o complejos para saturar el análisis. → Bloqueo del sistema de subida.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1597,8 +1811,8 @@
                 "text": "Backdoor"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1695,12 +1909,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "464ef79a-200a-43c2-87e4-a67ff8be2435",
+                  "title": "Saturación de la API mediante peticiones masivas",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Un atacante podría enviar múltiples peticiones de subida o descarga. → Indisponibilidad del servicio para usuarios legítimos",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                },
+                {
+                  "id": "da6176ab-2a3f-43b2-b45c-5aafdc0cd564",
+                  "title": "Acceso directo al almacenamiento saltándose la API",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "Acceso directo al almacenamiento saltándose la API",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": ""
+                },
+                {
+                  "id": "c0ac115b-397e-40d5-8d03-e1bd99847c3f",
+                  "title": "Permisos excesivos de la API sobre la base de datos o el almacenamiento",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "Si la API es comprometida, el atacante obtiene más privilegios de los necesarios. → Impacto crítico sobre todo el sistema.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 2
+              }
             }
           },
           {
@@ -1825,6 +2087,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 2
+    "threatTop": 24
   }
 }
